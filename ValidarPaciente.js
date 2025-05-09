@@ -19,27 +19,29 @@ function validarPaciente(){
     estadopaciente  = document . getElementById('estadoPaciente').value;
 
     //validar campos vacios
-    if(idPaciente === "" || nombrePaciente === "" || apellidoPaciente === "" || DireccionPaciente ===""
-    || telefonoPaciente ==="" || correoPaciente === "" || fechaNacimiento === "")
-    {
-
-        alert("REVISE EL FORMULARIO, NO DEBEN HABER CAMPOS VACIOS!!");
+    if(
+      idPaciente === "" || nombrePaciente === "" || apellidoPaciente === "" || DireccionPaciente ===""
+    || telefonoPaciente ==="" || correoPaciente === "" || fechaNacimiento === ""
+    ){
+     alert("REVISE EL FORMULARIO, NO DEBEN HABER CAMPOS VACIOS!!");
         return false;
     }
 
         //VALIDACION DE LONGITUD
-       var cantidad = idPaciente.length;
-       if(cantidad > 11){
-           alert("El Id del Paciente no puede tener mas de 11 numeros");
+      if(typeof idPaciente !== 'undefined' && idPaciente !== null) {
+    var cantidad = idPaciente.length;
+    if (cantidad > 12){
+           alert("El Id del Paciente no puede tener mas de 12 numeros");
            return false;
        }
     
     if(telefonoPaciente.length === 10){
         return true;
     }
-    else{
+ }else{
         alert ("Verifique el numero del telefono, debe tener 10 caractares.");
         return false;
     }
     
-    }
+}
+    

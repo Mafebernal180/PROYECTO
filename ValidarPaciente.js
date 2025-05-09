@@ -9,17 +9,17 @@ function validarPaciente(){
     var fechaNacimiento;
    
 
-    idpaciente = document.getElementByid('idPaciente').value;
-    nombrePaciente = document . getElementbyid('nombrePaciente').value;
-    apellidoPaciente = document . getElementbyid('apellidoPaciente').value;
-    DireccionPaciente=document . getElementbyid('direccionPaciente').value;
-    telefonoPaciente = document . getElementbyid('telefonoPaciente').value;
-    correoPaciente = document . getElementbyid('correoPaciente').value;
-    fechaNacimiento = document . getElementbyid('fechaNacimiento').value;
-    estadopaciente  = document . getElementbyid('estadoPaciente').value;
+    idPaciente = document.getElementById('idPaciente').value;
+    nombrePaciente = document . getElementById('nombrePaciente').value;
+    apellidoPaciente = document . getElementById('apellidoPaciente').value;
+    DireccionPaciente=document . getElementById('DireccionPaciente').value;
+    telefonoPaciente = document . getElementById('telefonoPaciente').value;
+    correoPaciente = document . getElementById('correoPaciente').value;
+    fechaNacimiento = document . getElementById('fechaNacimiento').value;
+    estadopaciente  = document . getElementById('estadoPaciente').value;
 
     //validar campos vacios
-    if(idPaciente === "" || nombrePaciente === "" || apellidoPaciente === "" || direccionPaciente ===""
+    if(idPaciente === "" || nombrePaciente === "" || apellidoPaciente === "" || DireccionPaciente ===""
     || telefonoPaciente ==="" || correoPaciente === "" || fechaNacimiento === "")
     {
 
@@ -29,12 +29,12 @@ function validarPaciente(){
 
         //VALIDACION DE LONGITUD
        var cantidad = idPaciente.length;
-       if(cantidad > 12){
-           alert("El Id del Paciente no puede tener mas de 12 numeros");
+       if(cantidad > 11){
+           alert("El Id del Paciente no puede tener mas de 11 numeros");
            return false;
        }
     
-    if(telefonoPaciente.length === 12){
+    if(telefonoPaciente.length === 10){
         return true;
     }
     else{

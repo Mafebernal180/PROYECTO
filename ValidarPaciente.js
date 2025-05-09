@@ -20,21 +20,21 @@ function validarPaciente(){
 
     //validar campos vacios
     if(
-      idPaciente === "" || nombrePaciente === "" || apellidoPaciente === "" || DireccionPaciente ===""
-    || telefonoPaciente ==="" || correoPaciente === "" || fechaNacimiento === ""
+      idPaciente === "" || nombrePaciente === "" || apellidoPaciente === "" || DireccionPaciente ===""||
+        telefonoPaciente ==="" || correoPaciente === "" || fechaNacimiento === ""
     ){
      alert("REVISE EL FORMULARIO, NO DEBEN HABER CAMPOS VACIOS!!");
         return false;
     }
 
-        //VALIDACION DE LONGITUD
+        //VALIDACION DE LONGITUD DEL idPaciente
       if(typeof idPaciente !== 'undefined' && idPaciente !== null) {
     var cantidad = idPaciente.length;
-    if (cantidad > 12){
-           alert("El Id del Paciente no puede tener mas de 12 numeros");
+    if (cantidad > 11){
+           alert("El Id del Paciente no puede tener mas de 11 numeros");
            return false;
        }
-    
+        //VALIDACION DE LONGITUD DEL TELEFONO
     if(telefonoPaciente.length === 10){
         return true;
     }
